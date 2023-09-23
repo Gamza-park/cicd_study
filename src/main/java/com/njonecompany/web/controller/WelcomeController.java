@@ -4,7 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import java.util.Date;
 
@@ -15,6 +18,39 @@ public class WelcomeController {
 
     @GetMapping("/")
     public String index(Model model) {
+        logger.debug("Welcome to njonecompany.com...");
+
+        model.addAttribute("msg", getMessage());
+        model.addAttribute("today", new Date());
+        System.out.println(model.getAttribute("today"));
+        return "index";
+
+    }
+
+    @PostMapping("/")
+    public String test(Model model) {
+        logger.debug("Welcome to njonecompany.com...");
+
+        model.addAttribute("msg", getMessage());
+        model.addAttribute("today", new Date());
+        System.out.println(model.getAttribute("today"));
+        return "index";
+
+    }
+
+    @DeleteMapping("/")
+    public String tes1(Model model) {
+        logger.debug("Welcome to njonecompany.com...");
+
+        model.addAttribute("msg", getMessage());
+        model.addAttribute("today", new Date());
+        System.out.println(model.getAttribute("today"));
+        return "index";
+
+    }
+
+    @PutMapping("/")
+    public String test2(Model model) {
         logger.debug("Welcome to njonecompany.com...");
 
         model.addAttribute("msg", getMessage());

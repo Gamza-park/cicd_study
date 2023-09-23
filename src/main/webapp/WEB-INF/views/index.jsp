@@ -3,6 +3,7 @@
 <html>
 <body>
     <h2>It's working Tomcat Service(!!)</h2>
+    <h3>Use poll SCM</h3>
     <hr>
     <h1>${msg}</h1>
     <h2>Today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" /></h2>
